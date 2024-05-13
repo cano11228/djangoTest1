@@ -12,14 +12,12 @@ def input_page(request):
 
         # Перенаправлення на сторінку відображення вводу
         return redirect('display_input')
-    # Якщо GET запит, відображаємо порожню форму
     return render(request, 'input.html')
 
 # Сторінка відображення користувацького вводу
 def display_input(request):
     # Отримання введення з сесії
     user_input = request.session.get('user_input', 'No Input Provided')
-    # Відправлення даних до шаблону
     return render(request, 'display_input.html', {'user_input': user_input})
 # Сторінка для роботи з request.session
 def session_page(request):

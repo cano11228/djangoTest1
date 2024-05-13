@@ -9,5 +9,4 @@ def courses_page(request):
     if request.user.is_authenticated:
         return HttpResponse("This is the Courses page")
     else:
-        # Якщо користувач не аутентифікований, перенаправлення на сторінку входу
         return HttpResponse("You have no permissions to view this page")
