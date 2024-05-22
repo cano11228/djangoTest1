@@ -1,6 +1,5 @@
 <form method="POST" action="{% url 'input_page' %}">
-    {% csrf_token %} 
-    <label for="user_input">Введіть дані:</label>
-    <input type="text" name="user_input">
-    <button type="submit">Відправити</button>
+    {% csrf_token %}
+    <textarea name="user_input" required></textarea>
+    <button type="submit">Submit</button>
 </form>
